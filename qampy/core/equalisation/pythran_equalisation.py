@@ -146,8 +146,6 @@ def train_equaliser(E, TrSyms, Niter, os, mu, wx, modes, adaptive, symbols,  met
         errorfct = mddma_error
     elif method == "dd":
         errorfct = ddlms_error
-    elif method == "sbd_data":
-        errorfct = sbd_data_error
     else:
         raise ValueError("Unknown method %s"%method)
     nmodes = E.shape[0]
